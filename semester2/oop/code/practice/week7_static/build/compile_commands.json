@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/fmi/semester2/oop/code/practice/week7_static/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\application.dir\\main.cpp.obj -c D:\\fmi\\semester2\\oop\\code\\practice\\week7_static\\main.cpp",
+  "file": "D:/fmi/semester2/oop/code/practice/week7_static/main.cpp",
+  "output": "CMakeFiles/application.dir/main.cpp.obj"
+},
+{
+  "directory": "D:/fmi/semester2/oop/code/practice/week7_static/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\application.dir\\user.cpp.obj -c D:\\fmi\\semester2\\oop\\code\\practice\\week7_static\\user.cpp",
+  "file": "D:/fmi/semester2/oop/code/practice/week7_static/user.cpp",
+  "output": "CMakeFiles/application.dir/user.cpp.obj"
+}
+]

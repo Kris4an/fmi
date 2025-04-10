@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/fmi/semester2/oop/code/lecture/lec5_streams/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\application.dir\\main.cpp.obj -c D:\\fmi\\semester2\\oop\\code\\lecture\\lec5_streams\\main.cpp",
+  "file": "D:/fmi/semester2/oop/code/lecture/lec5_streams/main.cpp",
+  "output": "CMakeFiles/application.dir/main.cpp.obj"
+}
+]

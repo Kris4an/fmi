@@ -1,0 +1,3 @@
+D:/fmi/semester2/oop/code/practice/week7_static/build/CMakeFiles/application.dir
+D:/fmi/semester2/oop/code/practice/week7_static/build/CMakeFiles/edit_cache.dir
+D:/fmi/semester2/oop/code/practice/week7_static/build/CMakeFiles/rebuild_cache.dir

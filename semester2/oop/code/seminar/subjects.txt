@@ -1,0 +1,2 @@
+read/write to file (на Семерджиев github-a)
+rule of 3 = copy constructor, operator =, destructor ~

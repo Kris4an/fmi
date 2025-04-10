@@ -1,0 +1,9 @@
+--abbrev <n> - ограничава символите на хеша
+
+git ls-files = Show information about files in the index and the working tree
+
+.gitattributes = настройки на git за repo-то
+
+https://git-scm.com/docs/gitattributes
+
+https://github.com/semerdzhiev/reading/blob/main/git.adoc

@@ -1,0 +1,20 @@
+[
+{
+  "directory": "D:/fmi/semester2/oop/code/practice/week6_streams/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\application.dir\\main.cpp.obj -c D:\\fmi\\semester2\\oop\\code\\practice\\week6_streams\\main.cpp",
+  "file": "D:/fmi/semester2/oop/code/practice/week6_streams/main.cpp",
+  "output": "CMakeFiles/application.dir/main.cpp.obj"
+},
+{
+  "directory": "D:/fmi/semester2/oop/code/practice/week6_streams/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\application.dir\\book.cpp.obj -c D:\\fmi\\semester2\\oop\\code\\practice\\week6_streams\\book.cpp",
+  "file": "D:/fmi/semester2/oop/code/practice/week6_streams/book.cpp",
+  "output": "CMakeFiles/application.dir/book.cpp.obj"
+},
+{
+  "directory": "D:/fmi/semester2/oop/code/practice/week6_streams/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\application.dir\\library.cpp.obj -c D:\\fmi\\semester2\\oop\\code\\practice\\week6_streams\\library.cpp",
+  "file": "D:/fmi/semester2/oop/code/practice/week6_streams/library.cpp",
+  "output": "CMakeFiles/application.dir/library.cpp.obj"
+}
+]
