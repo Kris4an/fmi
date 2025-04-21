@@ -8,13 +8,15 @@ target_sources(
     PRIVATE
         "registration_plate.cpp"
         "registration_plate.h"
+        "ucn.cpp"
+        "ucn.h"
 )
 
 
 # Executable target for the application
 add_executable(application)
 
-set_target_properties(application PROPERTIES OUTPUT_NAME "hw1")
+set_target_properties(application PROPERTIES OUTPUT_NAME "calc")
 
 target_link_libraries(
     application

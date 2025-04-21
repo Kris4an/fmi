@@ -44,4 +44,36 @@ registration_plate::registration_plate(const char* plate)
     }
 
     std::copy(plate, plate + plateLen, this->plate);
+
+    if(shortPrefix) this->plate[7] = 0;
+}
+
+const char* registration_plate::to_string() const
+{
+    return plate;
+}
+
+bool operator<(const registration_plate& l, const registration_plate& r)
+{
+    return (std::strncmp(l.to_string(), r.to_string(), 8) < 0);
+}
+
+bool operator==(const registration_plate& l, const registration_plate& r)
+{
+    return (std::strncmp(l.to_string(), r.to_string(), 8) == 0);
+}
+
+std::istream& operator>>(std::istream& inStream, registration_plate& rp)
+{
+    char plate[9];
+    inStream >> plate;
+    rp = registration_plate(plate);
+
+    return inStream;
+}
+std::ostream& operator<<(std::ostream& outStream, const registration_plate& rp)
+{
+    outStream << rp.to_string();
+
+    return outStream;
 }
