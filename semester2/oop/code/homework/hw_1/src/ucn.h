@@ -4,7 +4,7 @@
 
 class ucn{
     char number[11];
-private:
+public:
     ucn(const char*);
     int year() const;
     int month() const;

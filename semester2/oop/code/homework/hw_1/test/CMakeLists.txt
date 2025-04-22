@@ -12,6 +12,7 @@ target_sources(
     unit-tests
     PRIVATE
         "test_registration_plate.cpp"
+        "test_ucn.cpp"
 )
 
 # Automatically register all tests

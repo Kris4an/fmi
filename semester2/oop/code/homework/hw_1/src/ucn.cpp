@@ -10,29 +10,23 @@ ucn::ucn(const char* str)
         std::copy(str, str + 10, number);
     }
     else{
-        throw std::invalid_argument("Ivalid ucn");
+        throw std::invalid_argument("Invalid ucn");
     }
 }
 
-
-
-int ucn::year() const
-{
-    return getYear(number);
-}
 
 int getYear(const char* number)
 {
     short baseYear = 1900;
     if(number[2] == '2' || number[2] == '3') baseYear = 1800;
-    if(number[2] == '4' || number[2] == '5') baseYear = 2000;
+    else if(number[2] == '4' || number[2] == '5') baseYear = 2000;
 
-    return 1900 + (number[0] - '0')*10 + (number[1] - '0');
+    return baseYear + (number[0] - '0')*10 + (number[1] - '0');
 }
 
-int ucn::month() const
+int ucn::year() const
 {
-    return getMonth(number);
+    return getYear(number);
 }
 
 int getMonth(const char* number)
@@ -40,14 +34,21 @@ int getMonth(const char* number)
     return ((number[2] - '0') % 2 ) * 10 + (number[3] - '0');
 }
 
-int ucn::day() const
+int ucn::month() const
 {
-    return getDay(number);
+    return getMonth(number);
 }
+
 int getDay(const char* number)
 {
     return (number[4] - '0') * 10 + (number[5] - '0');
 }
+
+int ucn::day() const
+{
+    return getDay(number);
+}
+
 
 const char* ucn::to_string() const
 {
@@ -59,7 +60,8 @@ std::istream& operator>>(std::istream& inStream, ucn& egn)
     char num[11];
     inStream >> num;
     
-    egn = ucn(num);
+    if(!ucn::is_valid_ucn(num)) throw std::invalid_argument("Invalid UCN");
+    std::copy(num, num + 10, egn.number);
 
     return inStream;
 }
@@ -73,25 +75,62 @@ std::ostream& operator<<(std::ostream& outStream, const ucn& egn)
 
 bool isNumber(const char& c)
 {
-    return ('0' < c && c < '9');
+    return ('0' <= c && c <= '9');
 }
 
 bool ucn::is_valid_ucn(const char* str)
 {
-    if(std::strlen(str) != 10) throw std::invalid_argument("UCN must be exactly 10 characters long");
+    if(std::strlen(str) != 10) return false;
     
     for(int i = 0; i < 10; ++i)
     {
-        if(!isNumber(str[i])) throw std::invalid_argument("UCN must contain only numbers");
+        if(!isNumber(str[i])) return false;
+    }
+    
+    if(str[2] < '0' || str[2] > '5') 
+        return false;
+
+    if((str[2] == '1' || str[2] == '5' || str[2] == '3') && str[3] > '2')
+        return false;
+
+    int day = getDay(str);
+    if(day > 31 || day == 0) 
+        return false;
+
+    int month = getMonth(str);
+    if(month == 0) 
+        return false;
+
+    if(day == 31 && (month == 4 || month == 6 || month == 9 || month == 11))
+        return false;
+
+    if(month == 2)
+    {
+        if(day > 29) 
+            return false;
+        
+        int year = getYear(str);
+        if(day == 29)
+        {
+            if(year % 4 != 0 || (year % 400 != 0 && year % 100 == 0))
+                return false;
+        }
     }
 
-    if(str[3] < '0' || str[3] > '5') 
-        throw std::invalid_argument("Invalid month");
+    int check = (str[9] - '0') % 11;
+    if(check == 10) check = 0;
 
-    if((str[3] == '0' || str[3] == '4' || str[3] == '2') && str[4] > '2')
-        throw std::invalid_argument("Invalid month");
-    
-    
+    if(((str[0] - '0') * 2  + 
+        (str[1] - '0') * 4  + 
+        (str[2] - '0') * 8  + 
+        (str[3] - '0') * 5  + 
+        (str[4] - '0') * 10 + 
+        (str[5] - '0') * 9  + 
+        (str[6] - '0') * 7  + 
+        (str[7] - '0') * 3  +
+        (str[8] - '0') * 6  ) % 11 != check) return false;
+
+    return true;
 }
 
 std::string ucn::region()

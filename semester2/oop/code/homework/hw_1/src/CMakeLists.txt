@@ -16,7 +16,7 @@ target_sources(
 # Executable target for the application
 add_executable(application)
 
-set_target_properties(application PROPERTIES OUTPUT_NAME "calc")
+set_target_properties(application PROPERTIES OUTPUT_NAME "hw_1")
 
 target_link_libraries(
     application
