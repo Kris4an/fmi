@@ -29,7 +29,7 @@ registration_plate::registration_plate(const char* plate)
     else
     {
         if(plate[1] < 'A' || plate[1] > 'Z')
-            throw std::invalid_argument("Prefix must contain only capital latin letters");
+            throw std::invalid_argument("Long prefix must contain only capital latin letters");
 
         for(int i = 2; i <= 5; ++i)
         {
@@ -46,6 +46,7 @@ registration_plate::registration_plate(const char* plate)
     std::copy(plate, plate + plateLen, this->plate);
 
     if(shortPrefix) this->plate[7] = 0;
+    this->plate[8] = 0;
 }
 
 const char* registration_plate::to_string() const

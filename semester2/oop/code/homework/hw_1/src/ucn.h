@@ -14,4 +14,5 @@ public:
     const char* to_string() const;
     friend std::istream& operator>>(std::istream&, ucn&);
     friend std::ostream& operator<<(std::ostream&, const ucn&);
+    friend bool operator==(const ucn&, const ucn&);
 };

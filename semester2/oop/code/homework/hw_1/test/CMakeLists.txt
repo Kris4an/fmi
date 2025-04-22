@@ -13,6 +13,7 @@ target_sources(
     PRIVATE
         "test_registration_plate.cpp"
         "test_ucn.cpp"
+        "test_vehicle_register.cpp"
 )
 
 # Automatically register all tests

@@ -10,6 +10,8 @@ target_sources(
         "registration_plate.h"
         "ucn.cpp"
         "ucn.h"
+        "vehicle_register.cpp"
+        "vehicle_register.h"
 )
 
 

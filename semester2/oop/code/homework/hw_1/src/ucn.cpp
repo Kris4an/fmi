@@ -198,3 +198,8 @@ std::string ucn::region()
     else
         return "Invalid number";
 }
+
+bool operator==(const ucn& l, const ucn& r)
+{
+    return std::strcmp(l.to_string(), r.to_string()) == 0;
+}
