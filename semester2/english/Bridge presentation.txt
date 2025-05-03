@@ -1,0 +1,33 @@
+Bridge presentation
+
+1. What is bridge
+Bridge is a four player trick-taking card game. It is played with a standard 52 card deck. The game has different variants like duplicate bridge, rubber bridge and auction bridge. Today I will be talking mainly about duplicate bridge which is played in tournaments and in the FMI bridge club.
+
+2. Brief history
+The main belief is that bridge originates from the popular trick-taking game whist in the XIX century. In 1886 the first known rule book for bridge was published under the name "Birich, or Russian whist". It was written by John Collinson, a English financier working in Constantinople. He later stated that the game was popular with the Russian community in the city. The name is thought to be a transliteration of the Russian word "бюрич/бирич" -   a diplomatic clerk or an announcer. Another theory is that British soldiers invented the game while fighting in the Crimean war and named it after the Galata brigde (in Constantinople) which they crossed on their way to a coffehouse to play cards.
+
+3. The goal
+Bridge is played in team pairs and the goal is simple - get more point than the opposition team. Points are awarded for successfully completing a contract or, when the opposition is playing one, for defending a contract (when the opposition don't make their contract). There are point bonuses for higher contracts.
+
+4. The deal
+Each player is dealt exactly thirteen cards. In tournament play there are card holders in which the cards are placed so a single deal can be played on multiple tables. After that the scores are compared.
+
+5. The bid
+The dealer bids first and then the players take turns. The bids are: pass, a combination of a number from 1 to 7 and a trump suit (clubs, diamonds, hearts, spades, no trump), double and redouble. Double could only be given to an opponent's bid and redouble - only to a double. To make a contract the declarer has to take at least six plus the level of the contract tricks. For example to make a 3H contract the declarer needs to take minimum 6 + 3 = 9 tricks. If he fails to do so, points are awarded to the other team. When playing competitively players use bidding boxes.
+
+6. The play
+When a contract is reached, the player left of the declarer leads the attack. After that the declarer's partner becomes dummy and puts his cards on the table (yes, everyone can see them). The declarer plays with both his and the dummy's cards. The rules are simple - the highest card wins (the cards are ordered from 2 to A), unless the trick is ruffed (then playing a trump on a suit contract). If more than one player ruffs the higher trump card wins. When a player has a card in the played suit he must give it, otherwise he is not obligated to ruff or to give higher card (like in Belote).
+
+7. Bidding systems
+During the bidding a player must describe his hand to his partner so they can play the highest possible contract (to get the most points). For this reason bidding systems exist. They need to show two main things: strength in HCP (Honor card points) and suit lengths. The most popular systems in Bulgaria are Precision club and Natural club. On top of the system player can utilize conventions to better express their hands. Example is Blackwood which is the most popular convention for finding slams. 4NT is asking for Aces, and the player's partner is responding with the number of key-cards (Aces and the trump suit King).
+
+8. Pro techniques
+Finesse - Let's say you have a AQ and you see 56 in the dummy's hand. Playing a small card from the dummy and then playing the Q is a finesse. You do it on the assumption that the K is in the player sitting right of you.
+Squeeze - playing a long suit and forcing the opponents to discard winning tricks.
+Card markings - Every card played in bridge has a meaning. Most card marks are up to partner agreement. Some of the popular ones are marking for odd/even number of cards in suit
+
+9. Mathematical facts
+The number of possible hands is binomial coefficient fifty-two over thirteen which equals to six hundred thirty-five billion, thirteen million, five hundred fifty-nine thousand, six hundred. (635 013 559 600)
+The number of possible deals is even bigger (that includes the four players cards with a fixed dealer) - 52!/(13!)^4 = 53644737765488792839237440000 (53 octillion 644 septillion 737 sextillion 765 quintillion 488 quadrillion 792 trillion 839 billion 237 million 440 thousand)
+The possible distributions of a single suit. To count them we need the different ways to partition a set into 4, 3, 2 and 1 non-empty subsets. Conveniently for us the Stirling numbers of the second kind count just that. We only need to make some adjustments on the permutations of the cards. This is how we get the number: 67 120 144
+
